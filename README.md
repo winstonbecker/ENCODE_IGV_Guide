@@ -21,6 +21,43 @@ You can identify ENCODE datasets to plot either by navigating the data portal or
   <img width="80%" alt="image" src="https://github.com/user-attachments/assets/cf2697e0-c83d-48d3-8bb0-f67c65141fe7" />  
 </div>  
 
+Click on Annotation file set: ENCODE-rE2G predictions for left colon; Donor: ENCDO856ZOJ, which brings up this page:  
+
+<div style="text-align: center;">
+  <img width="80%" alt="image" src="https://github.com/user-attachments/assets/6fb38802-0767-4814-b7c4-eb43c24b05e1" />
+</div>  
+
+Then click on File Details to view the different associated files:
+
+<div style="text-align: center;">
+  <img width="80%" alt="image" src="https://github.com/user-attachments/assets/e30c8fc2-336e-4c64-aeab-db428794682a" />
+</div>  
+
+In this case we will plot the bedpe threshold links. Right click on the blue download icon and copy the link:
+
+<div style="text-align: center;">
+  <img width="80%" alt="image" src="https://github.com/user-attachments/assets/23e9df12-6cbb-4c3b-bd68-c7da5484c4b7" />
+</div>  
+
+Now go back to IGV and paste this link into Track URL and click OK.  
+
+<div style="text-align: center;">
+  <img width="80%" alt="image" src="https://github.com/user-attachments/assets/ea8b2e53-b7d8-44c7-a447-f0b09216d910" />
+</div>  
+
+This will load the file into your browser session. Now paste a region of interest in IGV and press enter. For example, chr11:2,188,204-2,320,124 contains the region around ASCL2 so we can go to that region here. Now we see predicted E2G links around ASCL2:  
+
+<div style="text-align: center;">
+  <img width="468" height="178" alt="image" src="https://github.com/user-attachments/assets/20cfc843-2144-4d2e-b0c8-6c20888ffaea" />
+</div>  
+
+Click the gear to the right of the track to edit visual properties such as track height, track color, name, or direction. Here we change the name to “59F Threshold E2G Predictions (bedpe),” the height to 100, and the color to dark blue. 
+
+<div style="text-align: center;">
+  <img width="80%" alt="image" src="https://github.com/user-attachments/assets/a76c9b3d-d88e-4a56-9e19-82a019881b35" />
+</div>  
+
+
 
 
 

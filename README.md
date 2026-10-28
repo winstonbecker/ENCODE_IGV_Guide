@@ -185,29 +185,6 @@ You can add additional tracks to the JSON file as follows:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="text-align: center;">
-  <img width="80%" alt="image" src="https://github.com/user-attachments/assets/a76c9b3d-d88e-4a56-9e19-82a019881b35" />
-</div>  
-
-
-
-
-
-
 ## References
 [1] James T. Robinson, Helga Thorvaldsdóttir, Wendy Winckler, Mitchell Guttman, Eric S. Lander, Gad Getz, Jill P. Mesirov. Integrative Genomics Viewer. Nature Biotechnology 29, 24–26 (2011).
 

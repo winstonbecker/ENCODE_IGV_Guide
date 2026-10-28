@@ -51,7 +51,153 @@ This will load the file into your browser session. Now paste a region of interes
   <img width="468" height="178" alt="image" src="https://github.com/user-attachments/assets/20cfc843-2144-4d2e-b0c8-6c20888ffaea" />
 </div>  
 
-Click the gear to the right of the track to edit visual properties such as track height, track color, name, or direction. Here we change the name to “59F Threshold E2G Predictions (bedpe),” the height to 100, and the color to dark blue. 
+Click the gear to the right of the track to edit visual properties such as track height, track color, name, or direction. Here we change the name to “59F Threshold E2G Predictions (bedpe),” the height to 100, and the color to dark blue.  
+
+Lets say you now wanted to add DNase data from the same donor. Navigate the DNase-seq experimental data page for that patient:  
+
+<div style="text-align: center;">
+  <img width="468" height="247" alt="image" src="https://github.com/user-attachments/assets/a2ba09f3-38c9-45c1-bd0d-f5bd7887067f" />
+</div>  
+
+Again click on file details and copy the link to the read-depth normalized bigwig file:  
+
+<div style="text-align: center;">
+  <img width="468" height="308" alt="image" src="https://github.com/user-attachments/assets/34b73de5-be2e-4843-bb9f-462df4f76aa2" />
+</div>  
+
+Go back to IGV and again go to Tracks > URL… and past in the URL.  
+
+<div style="text-align: center;">
+  <img width="468" height="138" alt="image" src="https://github.com/user-attachments/assets/7f9a8146-d8d3-46ac-886c-e170bb5db6e6" />
+</div>  
+
+Now the DNase track should also be visible. 
+
+<div style="text-align: center;">
+  <img width="468" height="235" alt="image" src="https://github.com/user-attachments/assets/80aed55a-26ae-4788-95a2-d55b451cbf02" />
+</div>  
+
+Similar to before, you can click on the gear to the right to change properties such as colors, height, name, and scale of the track. 
+
+
+## Loading custom data
+The user can also load tracks that they have defined from custom datasets to plot alongside the ENCODE data. While there are some pseudobulks available on the ENCODE portal, for the figure we defined pseudobulks for each cell type in ArchR, just using the two colon multiome datasets. For custom data such as this, the user can upload the data to locations such as dropbox or google drive to load into the genome browser. As an example, I uploaded the data to dropbox and made the links public. In this case, you can use the same Tracks > Add URL process to add the genomic tracks. 
+
+<div style="text-align: center;">
+  <img width="468" height="136" alt="image" src="https://github.com/user-attachments/assets/948fbd3a-31dd-4796-9f48-29c253ed27ce" />
+</div>  
+
+Clicking okay will load the track that you uploaded to dropbox. 
+
+<div style="text-align: center;">
+  <img width="468" height="221" alt="image" src="https://github.com/user-attachments/assets/134e2cab-f089-4235-8747-97029171ef10" />
+</div>  
+
+## Saving IGV Session JSON Files:
+
+It is good practice to save a browser session as a JSON file if you might go back to it later. To do this, go to the top and click Session and Save...  
+
+<div style="text-align: center;">
+  <img width="468" height="171" alt="image" src="https://github.com/user-attachments/assets/19827039-ec10-4524-9510-4ff935a7a799" />
+</div>  
+
+Give it a name and the click okay to download a JSON file of the session.
+
+<div style="text-align: center;">
+  <img width="468" height="141" alt="image" src="https://github.com/user-attachments/assets/65316043-0932-4268-87b3-fec0ed9d1bd4" />
+</div>  
+
+The session can then be reloaded in the future by going to Session and Local File… and selection the JSON file. 
+
+<div style="text-align: center;">
+  <img width="468" height="175" alt="image" src="https://github.com/user-attachments/assets/c39032d0-71f1-4fef-8a72-f3a7437d96bf" />
+</div>  
+
+## Editing IGV JSON Files:
+It can also be helpful to edit a JSON file directly, especially if you are making multiple tracks and changing a lot of the features. The format of the JSON file includes many basic fields specifying the genome as well as a "tracks" section where you can add additional tracks and specify plotting features for each track such as color, height, orientation, and order.  
+ 
+```
+{
+	"version": "2.15.13",
+	"showSampleNames": false,
+	"reference": {
+		"id": "hg38",
+		"name": "Human (GRCh38/hg38)",
+		"fastaURL": "https://igv-genepattern-org.s3.amazonaws.com/genomes/seq/hg38/hg38.fa",
+		"indexURL": "https://igv-genepattern-org.s3.amazonaws.com/genomes/seq/hg38/hg38.fa.fai",
+		"cytobandURL": "https://s3.amazonaws.com/igv.org.genomes/hg38/annotations/cytoBandIdeo.txt.gz",
+		"aliasURL": "https://s3.amazonaws.com/igv.org.genomes/hg38/hg38_alias.tab",
+		"chromosomeOrder": "chr1, chr2, chr3, chr4, chr5, chr6, chr7, chr8, chr9, chr10, chr11, chr12, chr13, chr14, chr15, chr16, chr17, chr18, chr19, chr20, chr21, chr22, chrX, chrY"
+	},
+	"locus": "chr11:2,188,204-2,320,124",
+	"roi": [],
+	"tracks": [
+		{
+			"type": "sequence",
+			"order": -9007199254740991
+		},
+		{
+			"url": "https://www.dropbox.com/scl/fi/k7pcvligxpnccqa4fqn2y/encode_e2g_predictions_left_colon_ENCSR867XFA_thresholded_predictions.bedpe.gz?rlkey=jgll7rqi3jumodbvol77j8qti&st=8jmc3u9m&dl=0",
+			"url": "https://www.encodeproject.org/files/ENCFF577BJW/@@download/ENCFF577BJW.bedpe.gz",
+			"name": "59F Threshold E2G Predictions (bedpe)",
+			"format": "bedpe",
+			"type": "interact",
+			"height": 100,
+			"order": 1,
+			"color": "#004a88",
+			"arcOrientation": false
+		}
+	]
+}
+```
+
+You can add additional tracks to the JSON file as follows:  
+
+```
+		{
+			"url": "https://www.encodeproject.org/files/ENCFF755FPE/@@download/ENCFF755FPE.bigWig",
+			"filename": "ENCFF755FPE.bigWig",
+			"name": "61F DNase",
+			"format": "bigwig",
+			"type": "wig",
+			"color": "#90AFC5",
+			"order": 4
+		},
+		{
+			"url": "https://www.encodeproject.org/files/ENCFF718FVY/@@download/ENCFF718FVY.bigWig",
+			"filename": "ENCFF718FVY.bigWig",
+			"name": "41F H3K27Ac",
+			"format": "bigwig",
+			"type": "wig",
+			"color": "#2A3132",
+			"order": 5
+		},
+		{
+			"url": "https://www.encodeproject.org/files/ENCFF163IDS/@@download/ENCFF163IDS.bigWig",
+			"filename": "ENCFF163IDS.bigWig",
+			"name": "61F_ATAC",
+			"format": "bigwig",
+			"type": "wig",
+			"color": "#763626",
+			"order": 6
+		}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div style="text-align: center;">
   <img width="80%" alt="image" src="https://github.com/user-attachments/assets/a76c9b3d-d88e-4a56-9e19-82a019881b35" />

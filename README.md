@@ -183,6 +183,7 @@ You can add additional tracks to the JSON file as follows:
 		}
 ```
 
+A detailed example of a JSON file that was used for part of the ENCODE figure can be found [here](https://github.com/winstonbecker/ENCODE_IGV_Guide/blob/main/IGV_webapp_session_with_encode_links.json). Note in this case the pseudobulk tracks were generated from the single-cell ATAC data with ArchR and uploaded to dropbox for visualization. They are currently located there, but may be removed at some point in the future.  
 
 
 ## References

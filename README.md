@@ -1,6 +1,6 @@
 # IGV Genome Brower Tracks with ENCODE Data
 ## IGV Genome Brower
-IGV [1-4] can be used as a web app or a desktop application, and offers a simple method to explore ENCODE data and other genomic datasets. For this tutorial, we will show the web app specifically, but a similar process can be used with the desktop app. First navigate to https://igv.org/app/.  
+IGV [1-4] can be used as a web app or a desktop application, and offers a simple method to explore ENCODE data and other genomic datasets. For this tutorial, we will show the web app specifically, but a similar process can be used with the desktop app. We'll also show an example JSON file that can be loaded into IGV. First navigate to https://igv.org/app/.  
 
 ## Loading tracks from ENCODE
 To load a single track go to Tracks > URL …  
